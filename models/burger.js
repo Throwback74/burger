@@ -1,9 +1,9 @@
 // Import the ORM to create functions that will interact with the database.
 var orm = require("../config/orm.js");
-
+var table = 'burgers';
 var burger = {
   selectAll: function(cb) {
-    orm.selectAll("burgers", function(res) {
+    orm.selectAll(table, function(res) {
       cb(res);
     });
   },
@@ -13,8 +13,8 @@ var burger = {
       cb(res);
     });
   },
-  update: function(objColVals, condition, cb) {
-    orm.update("burgers", objColVals, condition, function(res) {
+  update: function(objColVals, id, cb) {
+    orm.update(table, objColVals, id, function(res) {
       cb(res);
     });
   }
