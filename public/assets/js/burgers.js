@@ -1,13 +1,13 @@
 $(document).ready(function(){
-  var burgersVar;
+  // var burgersVar;
   
-  function getTodos() {
-    $.get("/api/burgers", function(data) {
-      burgerArr = data;
-      initializeRows();
-    });
-  }
-  getTodos();
+  // function getTodos() {
+  //   $.get("/api/burgers", function(data) {
+  //     burgerArr = data;
+  //     initializeRows();
+  //   });
+  // }
+  // getTodos();
 
   // var posts;
   // function getPosts() {
@@ -23,8 +23,24 @@ $(document).ready(function(){
   //   });
   // }
   // getPosts();
+  // InitializeRows handles appending all of our constructed post HTML inside
+  // blogContainer
+  // function initializeRows() {
+  //   blogContainer.empty();
+  //   var postsToAdd = [];
+  //   for (var i = 0; i < posts.length; i++) {
+  //     postsToAdd.push(createNewRow(posts[i]));
+  //   }
+  //   blogContainer.append(postsToAdd);
+  // }
 
-
+  // function displayEmpty() {
+  //   blogContainer.empty();
+  //   var messageH2 = $("<h2>");
+  //   messageH2.css({ "text-align": "center", "margin-top": "50px" });
+  //   messageH2.html("No posts yet for this category, navigate <a href='/cms'>here</a> in order to create a new post.");
+  //   blogContainer.append(messageH2);
+  // }
   // app.get("/api/posts/", function(req, res) {
   //   db.Burger.findAll({})
   //     .then(function(dbPost) {
@@ -58,7 +74,7 @@ $(document).ready(function(){
     event.preventDefault();
 
     var newBurger = {
-      name: $("#burger_name").val().trim(),
+      burger_name: $("#burger_name").val().trim(),
     };
     // Send the POST request.
     $.ajax("/api/burgers", {
