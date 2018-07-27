@@ -1,4 +1,38 @@
 $(document).ready(function(){
+  var burgersVar;
+  
+  function getTodos() {
+    $.get("/api/burgers", function(data) {
+      burgerArr = data;
+      initializeRows();
+    });
+  }
+  getTodos();
+
+  // var posts;
+  // function getPosts() {
+  //   $.get("/api/posts", function(data) {
+  //     console.log("Posts", data);
+  //     posts = data;
+  //     if (!posts || !posts.length) {
+  //       displayEmpty();
+  //     }
+  //     else {
+  //       initializeRows();
+  //     }
+  //   });
+  // }
+  // getPosts();
+
+
+  // app.get("/api/posts/", function(req, res) {
+  //   db.Burger.findAll({})
+  //     .then(function(dbPost) {
+  //       res.json(dbPost);
+  //     });
+  // });
+
+
   $(".devour").on("click", function(event) {
     var id = $(this).data("id");
     // var newDevoured = $(this).data("newDevoured");
