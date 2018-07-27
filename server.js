@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var methodOverride = require('method-override');
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
@@ -17,14 +18,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
+app.use(methodOverride("_method"));
+
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 require("./controllers/burger_controller.js")(app);
 
-// Start our server so that it can begin listening to client requests.
-db.sequelize.sync({ force: false }).then(function() {
+// Start our server so that it can begin listening to client requests.{ force: false }
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
   });
