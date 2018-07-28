@@ -118,9 +118,14 @@ img {
 
 #burger-input {
   font-family: 'Roboto Mono', monospace;
+  font-size: 10px;
 }
 
 .btn-danger {
   position: relative;
   z-index: 9000;
+}
+
+.add-burger {
+  margin-top: 15px;
 }
