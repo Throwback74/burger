@@ -4,8 +4,7 @@
     "password": "Password",
     "database": "burger_db",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "seederStorage": "json"
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
@@ -15,10 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "oj259xhjfnfpruq7",
-    "password": "d1rfdi0k7w0amo1b",
-    "database": "vmodbg6nsyu6tebv",
-    "host": "ofcmikjy9x4lroa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
-}
+  }
 }

@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Burgers = sequelize.define('burgers', {
+    var Burger = sequelize.define('Burger', {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -22,5 +22,5 @@ module.exports = function (sequelize, DataTypes) {
         timestamps: false
     });
 
-    return Burgers;
+    return Burger;
 };

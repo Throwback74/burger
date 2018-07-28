@@ -20,7 +20,7 @@ module.exports = function(app) {
   });
   // Add sequelize code to get all Burgers 
   app.get("/api/all", function(req, res) {
-    db.burgers.findAll({}).then(function(data) {
+    db.Burger.findAll({}).then(function(data) {
         res.render("index", { burgers: data });
       });
   });
@@ -29,7 +29,7 @@ module.exports = function(app) {
   app.post("/api/burgers", function(req, res) {
     var burger = req.body;
 
-    db.burgers.create({
+    db.Burger.create({
       burger_name: burger.burger_name
     }).then(function(results) {
       console.log(results);
@@ -39,7 +39,7 @@ module.exports = function(app) {
 
   // Add sequelize code to update the devoured value
   app.put("/api/:id", function(req, res) {
-    db.burgers.update({ devoured: 1 },
+    db.Burger.update({ devoured: 1 },
       {
       where: {
         id: req.body.id

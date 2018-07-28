@@ -2,16 +2,26 @@
   box-sizing: border-box;
   text-align: center;
   margin: 0px;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Londrina Sketch', cursive;
+}
+
+html {
+  background: #242424 !important;
 }
 
 body {
-  background: #ccf2ff;
-  background-size: 100%;
+  /* background: #ccf2ff; */
+  background: #242424 !important;
+  /* background-color: #242424 !important; */
 }
 
 .container {
-  width: 100%;
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  background-image: url("../img/burger-town.jpg");
+  background-repeat: no-repeat;
+  background-image: center;
 }
 
 img {
@@ -23,37 +33,94 @@ img {
   margin-bottom: 20px;
 }
 
+.burgerLists {
+  margin-top: 370px;
+}
+
 #not-devoured {
     text-align: left;
     font-size: 20px;
-    font-family: 'Amatic SC', cursive;
-    font-weight: 700;
-    padding-right: 0;
+    font-family: 'Londrina Sketch', cursive;
+    /* font-weight: 700; */
+    padding: 0;
     color: #76a159;
+
 }
 
 .devour-form {
     width: 20%;
     display: inline-block;
     margin-right: 40px;
-    font-family: 'Amatic SC', cursive;
+    /* font-family: 'Amatic SC', cursive; */
+    font-family: 'Londrina Sketch', cursive;
+}
+
+.btn {
+  font-family: 'Londrina Solid', cursive;
 }
 
 #top {
-    background: #808080;
     color: #ffffff;
     margin-bottom: 30px;
     padding-bottom: 10px;
 }
 
 .devour-button {
-    margin-right: 30px;
-    margin-left: 20px;
+  margin-bottom: 2px;
 }
 
 #devoured {
     text-align: left;
     font-size: 20px;
-    font-family: 'Amatic SC', cursive;
-    font-weight: 700;
+    font-family: 'Londrina Sketch', cursive;
+    /* font-weight: 700; */
+}
+
+#menuList {
+  font-size: 16px;
+  font-family: 'Londrina Shadow', cursive;
+  color: white;
+  font-weight: 700;
+}
+
+.nestedRows {
+  margin-bottom: 0 !important;
+}
+
+.burgerMenu {
+  margin-right: 0;
+  text-align: left;
+  padding: 0;
+  background: #242424 !important;
+  height: auto;
+}
+
+.devourButton {
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+.p-devoured {
+  font-family: 'Londrina Solid', cursive !important;
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+.btm {
+  /* position: fixed; */
+  position: relative;
+  z-index: 1000;
+  background-color: #242424 !important;
+  height: 160px;
+  background-image: none !important;
+  color: white;
+}
+
+#burger-input {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.btn-danger {
+  position: relative;
+  z-index: 9000;
 }
